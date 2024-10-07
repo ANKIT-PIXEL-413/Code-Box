@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Helps with consistent sizing */
+}
+
+body {
+  background-color: #343A82;
+  font-family: Arial, sans-serif;
+  /* Set a default font */
+}
+
+.container {
+  position: relative;
+  top: 50px;
+  width: 90%;
+  /* Use a percentage for responsive design */
+  max-width: 1000px;
+  /* Max width for larger screens */
+  background-color: #FFFFFF75;
+  filter: drop-shadow(2px 2px 5px #FFFFFF) drop-shadow(-2px -2px 5px #FFFFFF);
+  display: flex;
+  flex-direction: column;
+  /* Stack elements vertically */
+  align-items: center;
+  /* Center horizontally */
+  text-align: center;
+  padding: 30px;
+  /* Increased padding for more space */
+  margin: 0 auto;
+  /* Center the container */
+}
+
+summary {
+  font-weight: bolder;
+  margin-top: 10px;
+  text-shadow: 3px 3px 2px #ADADAD;
+  color: #333;
+  /* Darker color for better contrast */
+  font-size: 2.0em;
+  /* Default heading size for larger screens */
+  animation: motion 1.5s ease-in-out alternate infinite;
+  list-style-type: none;
+
+}
+
+summary::before {
+  content: ' ';
+  /* This will show when closed */
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+details[open] summary::before {
+  content: ' ';
+  font-size: 1.7rem;
+  text-align: center;
+  /* This will show when opened */
+}
+
+@keyframes motion {
+  from {
+    font-size: 2.0rem;
+    opacity: 100%;
+  }
+
+  to {
+    font-size: 2.4rem;
+    opacity: 95%;
+  }
+}
+
+p {
+  font-weight: bold;
+  word-spacing: 3px;
+  line-height: 1.6;
+  /* Improved readability */
+  padding: 10px;
+  /* Adds space around the text */
+  color: #333;
+  /* Darker color for better contrast */
+  text-shadow: 3px 3px 5px #ADADAD;
+  font-size: 1.2em;
+  /* Default paragraph size for larger screens */
+  animation: motion2 4s linear infinite;
+}
+
+@keyframes motion2 {
+  10% {
+    color: #E44141;
+  }
+
+  20% {
+    color: #FF0000;
+  }
+
+  30% {
+    color: #3EFF00;
+  }
+
+  40% {
+    color: #00FF9D;
+  }
+
+  50% {
+    color: #001BFF;
+  }
+
+  60% {
+    color: #FF00AF;
+  }
+
+  70% {
+    color: #D400FF;
+  }
+
+  80% {
+    color: #00CDFF;
+  }
+
+  90% {
+    color: #235FD1;
+  }
+
+  100% {
+    color: #E44141;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    top: 20px;
+    /* Adjust top position for smaller screens */
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+  }
+
+  summary {
+    font-size: 1.0em;
+    /* Adjust heading size for smaller screens */
+  }
+
+  p {
+    font-size: 1em;
+    /* Adjust paragraph size for smaller screens */
+  }
+}
+
+h3 {
+  z-index: 3;
+  color: #000000;
+  display: inline;
+  left: 50px;
+  top: 75px;
+  text-align: center;
+  background-color: #00F1FF;
+  position: relative;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+span {
+  color: #FF0000;
+  animation: motion3 5s ease-in-out infinite;
+}
+
+@keyframes motion3 {
+  0% {
+    color: #FFFFFF;
+  }
+
+  25% {
+    color: #FF0000;
+  }
+
+  50% {
+    color: #009400;
+  }
+
+  75% {
+    color: #0000ff;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
